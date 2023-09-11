@@ -1,0 +1,107 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #716f6f;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.active {
+    background-color: #69175d;
+}
+  li a:hover {
+    background-color: #111;
+  }
+
+body{
+    background-color: black;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.vagaimg{
+    position: relative;
+    width: auto;
+    height: 250px;
+    top: 20px;   
+    left: 20px; 
+    bottom: 20px;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2), 10px 10px 10px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+    transition: .5s ease;
+}
+.text{
+    position: relative;
+    font-size: 40px;
+    top: 30px;
+    bottom: 5px;   
+    left: 0px;
+    padding-bottom: 15px;
+}
+.column {
+    float: left;
+    width: 22%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+.column2{
+    float: left;
+    width: 15%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.container:hover .vagaimg {
+    opacity: 80%;
+  }
+.container {
+    background-image: url(vagabond.jpg);
+    width: 1240px;
+    height: 300px;
+    border-radius: 0.9%;
+}
+.polaroid {
+    box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2), 10px 10px 10px 0px rgba(255, 255, 255, 0.19);
+    width: max-content;
+    height: max-content;
+}
+.animated {
+    width: 100px;
+    height: 100px;
+    background-image: url(hertaa1.webp);
+    position: relative;
+    animation: mymove 5s infinite;
+  }
+  
+  .animated {
+    width: 500px;
+    height: 500px;
+    background-image: url(hertaa2.webp);
+    position: relative;
+    animation: mymove 3s linear infinite;
+}
+
+@keyframes mymove {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 1200px;
+    }
+}
