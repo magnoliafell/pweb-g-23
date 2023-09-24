@@ -3,9 +3,10 @@
 <body>
   <form>
     <h1>Input angka di sini</h1>
-    <input id="firstInput" type="number" value="0">
-    <input id="secondInput" type="number" value="0">
+    <input id="firstInput" type="number">
+    <input id="secondInput" type="number">
   </form>
+  <br>
   <button type="button" onclick = add()>+</button>
   <button type="button" onclick= sub()>-</button>
   <button type="button" onclick= mul()>*</button>
@@ -14,24 +15,20 @@
   <p id="total"></p>
   <script>
     function add() {
-      let x = parseInt(firstInput.value);
-      let y = parseInt(secondInput.value);
-      document.getElementById("total").innerHTML = x + y;
+      document.getElementById("total").innerHTML = parseFloat(firstInput.value) + parseFloat(secondInput.value);
     }
     function sub() {
-      let x = parseInt(firstInput.value);
-      let y = parseInt(secondInput.value);
-      document.getElementById("total").innerHTML = x - y;
+      document.getElementById("total").innerHTML = parseFloat(firstInput.value) - parseFloat(secondInput.value);
     }
     function mul() {
-      let x = parseInt(firstInput.value);
-      let y = parseInt(secondInput.value);
-      document.getElementById("total").innerHTML = x * y;
+      document.getElementById("total").innerHTML = parseFloat(firstInput.value) * parseFloat(secondInput.value);
     }
     function div() {
-      let x = parseInt(firstInput.value);
-      let y = parseInt(secondInput.value);
-      document.getElementById("total").innerHTML = x / y;
+      if (secondInput.value == 0) {
+        document.getElementById("total").innerHTML = "Error";
+      } else {
+        document.getElementById("total").innerHTML = parseFloat(firstInput.value) / parseFloat(secondInput.value);
+      }
     }
   </script>
 
